@@ -1,0 +1,188 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    color: #2c3e50;
+}
+
+a {
+    color: #e67e22;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header - Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1500x500/8B4513/FFFFFF?text=Paisagem+do+Campo');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Main Content Sections */
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.text-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.image-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-caption {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Seções específicas */
+.campo-section {
+    background-color: #fdf5e6; /* Cor mais clara para o campo */
+}
+
+.conexao-section {
+    background-color: #e0f2f7; /* Cor para a conexão/transformação */
+}
+
+.cidade-section {
+    background-color: #ffe0b2; /* Cor para a cidade */
+}
+
+/* Efeito de Fluxo (Grãos e Produtos) */
+.wheat-flow, .product-flow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 2.5em;
+    color: #e67e22; /* Cor para os ícones */
+}
+
+.grain, .product-icon {
+    margin: 0 10px;
+    animation: flow 2s infinite alternate ease-in-out;
+}
+
+.grain:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.grain:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.product-icon:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.product-icon:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes flow {
+    0% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(-10px); opacity: 0.8; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+    font-size: 0.9em;
+    margin-top: 40px;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    section {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .content-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .text-content, .image-content {
+        max-width: 48%; /* Ajuste para ter duas colunas */
+    }
+
+    .image-content img {
+        margin: 0; /* Remover margin auto para alinhamento */
+    }
+
+    /* Inverter ordem para algumas seções para variar o layout */
+    .conexao-section .content-wrapper {
+        flex-direction: row-reverse;
+    }
+}
